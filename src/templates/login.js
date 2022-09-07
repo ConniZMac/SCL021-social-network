@@ -1,6 +1,6 @@
 function login() {
   const html = /*html*/ `
-  <div class='bg-login'>
+  <div class='bg-login' id="logInPage">
     <div class='bg-green'>
     <img class='logo' width='270'  src='./img/logo2.png' />         
           <h2>Inicia sesión</h2>
