@@ -65,3 +65,7 @@ body {
   background: #e68e8e;
   border-radius: 40px;
 }
+
+#register-page {
+  display: none;
+}
