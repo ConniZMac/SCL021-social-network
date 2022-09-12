@@ -1,4 +1,6 @@
 import { navigate } from "../router/routes.js";
+import { wall } from "../templates/posts.js";
+
 function login() {
   const html = /*html*/ `
   <div class='bg-login' id="logInPage">
@@ -17,12 +19,22 @@ function login() {
  </div>`;
   const container = document.createElement("div");
   container.innerHTML = html;
+
+  //link to go to register
   const linkRegister = container.querySelector("#register");
   linkRegister.addEventListener("click", (event) => {
     event.preventDefault();
     navigate("register");
   });
   return container;
+
+  //link to go to wall
+  const linkWall = container.querySelector("logInUser");
+  linkWall.addEventListener("click", (event) => {
+    event.preventDefault();
+    navigate("wall");
+  });
+  return postsWall;
 }
 
 export { login };
