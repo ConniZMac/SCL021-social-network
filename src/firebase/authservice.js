@@ -1,20 +1,29 @@
 import { getAuth, createUserWithEmailAndPassword,GoogleAuthProvider,signInWithPopup } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js";
 import{app} from "./firebase.js"
+
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
+
+//Crea usuario con correo y contraseña
 function createUser (email, password) {
-    createUserWithEmailAndPassword(auth, email, password)
+  return new Promise((resolve, reject) => {
+    createUserWithEmailAndPassword( email, password)
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
-      // ...
+      resolve (userCredential)
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      // ..
+      console.log (error.message) 
+      reject (error.message)
     });
+    
+  })
+   
 }
+//ingresar con google
 function logInWithGoogle (){
   signInWithPopup(auth, provider)
   .then((result) => {

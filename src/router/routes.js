@@ -6,28 +6,33 @@
         path: '/',
         template: login(),
       },
+      register: {
+        path: '/register',
+        template: register(),
+      },
 
 
-        /*addEvents:()=>{
+        //addEvents:()=>{
             // agregar el addvenet listener del boton
-            document.getElementById("register").addEventListener("click",() => {
-              console.log("'hola")
+            //document.getElementById("register").addEventListener("click",() => {
+              //console.log("'hola")
               //showRegisterPage();
-            })*/
+           // })
         
       }
+      
   
   function navigate(route) { //, substr = ""
       console.log(route)
       const template = routes[route].template;
-      const addEvents =  routes[route].addEvents
+      //const addEvents =  routes[route].addEvents
       const path = routes[route].path; 
       history.pushState({}, route); //, `${path}?${substr}`
       const root = document.getElementById('root');
       root.innerHTML = ' ';
-      const element = document.createElement('div');
-      element.innerHTML=template;
-      root.appendChild(element);
+      //const element = document.createElement('div');
+      //element.innerHTML=template;
+      root.appendChild(template);//element
       //addEvents()
     }
     

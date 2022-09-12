@@ -1,5 +1,5 @@
 import { logInWithGoogle} from './firebase/authservice.js';
-import { showRegisterPage } from './templates/register.js';
+
 import {navigate} from './router/routes.js';
 
 const path = window.location.pathname;
@@ -12,8 +12,7 @@ switch (path) {
     })
     break;
 
-  case "/register":
-    console.log("bye")
+   case "/register":
     navigate("register");
     document.getElementById("register").addEventListener("click",() => {
       showRegisterPage();
