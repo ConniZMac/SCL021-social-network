@@ -1,3 +1,4 @@
+import { navigate } from "../router/routes.js";
 function login() {
   const html = /*html*/ `
   <div class='bg-login' id="logInPage">
@@ -14,7 +15,14 @@ function login() {
           </button>
       </div>
  </div>`;
-  return html;
+  const container = document.createElement("div");
+  container.innerHTML = html;
+  const linkRegister = container.querySelector("#register");
+  linkRegister.addEventListener("click", (event) => {
+    event.preventDefault();
+    navigate("register");
+  });
+  return container;
 }
 
 export { login };
