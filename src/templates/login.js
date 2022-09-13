@@ -1,5 +1,6 @@
 import { navigate } from "../router/routes.js";
-import { wall } from "../templates/posts.js";
+import { logInWithGoogle } from "../firebase/authservice.js";
+
 
 function login() {
   const html = /*html*/ `
@@ -26,15 +27,21 @@ function login() {
     event.preventDefault();
     navigate("register");
   });
-  return container;
+  
+   //link to enter with google
+  container.querySelector("#googleButton").addEventListener("click",() => {
+    logInWithGoogle();
+  })
 
   //link to go to wall
-  const linkWall = container.querySelector("logInUser");
+  const linkWall = container.querySelector("#logInUser");
   linkWall.addEventListener("click", (event) => {
     event.preventDefault();
     navigate("wall");
   });
-  return postsWall;
+
+  return container;
 }
+
 
 export { login };

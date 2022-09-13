@@ -1,38 +1,33 @@
-import { logInWithGoogle} from './firebase/authservice.js';
-
-import {navigate} from './router/routes.js';
+import {navigate, 
+        routes} from './router/routes.js';
 
 const path = window.location.pathname;
-switch (path) {
+navigate(path)
+/*switch (path) {
   case "/":
     console.log("Hola")
-    navigate("login");
-    document.getElementById("googleButton").addEventListener("click",() => {
-      logInWithGoogle();
-    })
+    navigate("/");
     break;
 
-   case "/register":
-    navigate("register");
-    document.getElementById("register").addEventListener("click",() => {
-      showRegisterPage();
-    })
+  case "/register":
+    navigate("/register");
     break;
 
-  case "/profile":
-    navigate("profile");
+  case "/wall":
+    navigate("/wall");
     break;
-  case "/addPost":
+
+  /*case "/addPost":
     navigate("addPost");
     break; 
   case "/updatePost":
     // let substr =  window.location.search.substring(1)
     navigate("updatePost"); //, substr
     break; 
+
   default:
     navigate("login");
     break;
 }
+*/
 
-
-//export {path};

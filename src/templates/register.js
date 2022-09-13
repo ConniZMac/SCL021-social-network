@@ -4,7 +4,7 @@ import { navigate } from "../router/routes.js";
 
 //Aca empieza la segunda pagina
 function register() {
-    const html = /*html*/ `
+  const html = /*html*/ `
     <div class='bg-login' id="register-page">
       <div class='bg-green'>
       <img class='logo' width='200'  src='./img/logo.png' />
@@ -19,45 +19,47 @@ function register() {
         </div>
     </div>`;
 
-//Transformamos el template de string a un elemento
-     const container = document.createElement("div");
-     container.id="contenedorR";
-     container.innerHTML = html;
-     const linkSignIn = container.querySelector("#register");
-     linkSignIn.addEventListener("click", (event) => {
-     event.preventDefault();
-     navigate("login");
-     });
-     // Crear cuenta + posibles errores
+  //Transformamos el template de string a un elemento
+  const container = document.createElement("div");
+  container.id = "contenedorR";
+  container.innerHTML = html;
+  const linkSignIn = container.querySelector("#register");
+  linkSignIn.addEventListener("click", (event) => {
+    event.preventDefault();
+    navigate("login");
+  });
+
+  // Crear cuenta + posibles errores
   const btnCreateAccount = container.querySelector("#createAccount");
   btnCreateAccount.addEventListener("click", async () => {
-    const container =document.getElementById ("contenedorR");
+    const container = document.getElementById("contenedorR");
     const email = container.querySelector("#registerEmail").value;
     const password = container.querySelector("#createPassword").value;
     try {
       await createUser(email, password);
-     // navigate("publications"); 
-    } catch (mistake) { 
+      // navigate("publications");
+    } catch (mistake) {
       const error = mistake.message;
       const alertError = container.querySelector("#alertRegister");
       console.log(mistake);
-      if(error==='auth/email-already-in-use'){
-        alertError.innerHTML = '¡El usuario ya ha sido registrado, prueba con otro correo!';
-      } else if(error==='auth/invalid-email'){
-        alertError.innerHTML = '¡Ingresa un correo válido!';
-      } else if(error==='auth/weak-password'){
-        alertError.innerHTML = '¡La contraseña debe contener mínimo 6 caracteres!';
-      } else if(error==='auth/user-not-found'){
-        alertError.innerHTML = '¡No existe el usuario ingresado!';
-      } else if(error==='auth/wrong-password'){
-        alertError.innerHTML = '¡Contraseña inválida!';
-      }else{
-        alertError.innerHTML = '¡Algo salió mal, ingresa tus datos nuevamente!';
+      if (error === "auth/email-already-in-use") {
+        alertError.innerHTML =
+          "¡El usuario ya ha sido registrado, prueba con otro correo!";
+      } else if (error === "auth/invalid-email") {
+        alertError.innerHTML = "¡Ingresa un correo válido!";
+      } else if (error === "auth/weak-password") {
+        alertError.innerHTML =
+          "¡La contraseña debe contener mínimo 6 caracteres!";
+      } else if (error === "auth/user-not-found") {
+        alertError.innerHTML = "¡No existe el usuario ingresado!";
+      } else if (error === "auth/wrong-password") {
+        alertError.innerHTML = "¡Contraseña inválida!";
+      } else {
+        alertError.innerHTML = "¡Algo salió mal, ingresa tus datos nuevamente!";
       }
     }
   });
-    return container;
-  }
+  return container;
+}
 
-
-  export { register};
+export { register };
