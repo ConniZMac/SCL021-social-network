@@ -34,5 +34,9 @@
   },
   "engines": {
     "node": ">=16.x"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "jsdom": "^20.0.0"
   }
 }

@@ -1,4 +1,3 @@
-const root = document.getElementById('root');
-
+const root = document.getElementById("root");
 
 export { root };

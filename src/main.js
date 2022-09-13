@@ -5,32 +5,32 @@ import {navigate} from './router/routes.js';
 const path = window.location.pathname;
 switch (path) {
   case "/":
-    console.log("Hola")
-    navigate("login");
-    document.getElementById("googleButton").addEventListener("click",() => {
+    console.log('Hola')
+    navigate('login');
+    document.getElementById('googleButton').addEventListener('click',() => {
       logInWithGoogle();
     })
     break;
 
-   case "/register":
+   case '/register':
     navigate("register");
-    document.getElementById("register").addEventListener("click",() => {
+    document.getElementById('register').addEventListener('click',() => {
       showRegisterPage();
     })
     break;
 
-  case "/profile":
-    navigate("profile");
+  case '/profile':
+    navigate('profile');
     break;
-  case "/addPost":
-    navigate("addPost");
+  case '/addPost':
+    navigate('addPost');
     break; 
-  case "/updatePost":
+  case '/updatePost':
     // let substr =  window.location.search.substring(1)
-    navigate("updatePost"); //, substr
+    navigate('updatePost'); //, substr
     break; 
   default:
-    navigate("login");
+    navigate('login');
     break;
 }
 
