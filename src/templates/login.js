@@ -1,4 +1,7 @@
 import { navigate } from "../router/routes.js";
+import { logInWithGoogle } from "../firebase/authservice.js";
+
+
 function login() {
   const html = /*html*/ `
   <div class='bg-login' id="logInPage">
@@ -17,12 +20,28 @@ function login() {
  </div>`;
   const container = document.createElement("div");
   container.innerHTML = html;
+
+  //link to go to register
   const linkRegister = container.querySelector("#register");
   linkRegister.addEventListener("click", (event) => {
     event.preventDefault();
     navigate("register");
   });
+  
+   //link to enter with google
+  container.querySelector("#googleButton").addEventListener("click",() => {
+    logInWithGoogle();
+  })
+
+  //link to go to wall
+  const linkWall = container.querySelector("#logInUser");
+  linkWall.addEventListener("click", (event) => {
+    event.preventDefault();
+    navigate("wall");
+  });
+
   return container;
 }
+
 
 export { login };

@@ -1,9 +1,9 @@
-
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Jacques Francois';font-size: 18px;
+  font-family: "Jacques Francois";
+  font-size: 18px;
 }
 
 /*
@@ -48,21 +48,24 @@ body {
 .logo {
   margin-top: 15px;
   margin-bottom: 0%;
-  padding:10px;
+  padding: 10px;
 }
 
 .subtitulo {
   margin-bottom: 20px;
 }
 
-#email{
+#email {
   background: #e68e8e;
   margin-bottom: 2px;
   border-radius: 40px;
 }
 
-#password, #googleButton, #logInUser{
+#password,
+#googleButton,
+#logInUser {
   background: #e68e8e;
   border-radius: 40px;
 }
+
 

@@ -5,7 +5,7 @@ import { navigate } from "../router/routes.js";
 //Aca empieza la segunda pagina
 function register() {
   const html = /*html*/ `
-    <div class='bg-login' id='register-page'>
+    <div class='bg-login' id="register-page">
       <div class='bg-green'>
       <img class='logo' width='200'  src='./img/logo.png' />
             <p>¡Regístrate! </p>        
