@@ -20,13 +20,13 @@ navigate(path)
   /*case "/addPost":
     navigate("addPost");
     break; 
-  case "/updatePost":
+  case '/updatePost':
     // let substr =  window.location.search.substring(1)
-    navigate("updatePost"); //, substr
+    navigate('updatePost'); //, substr
     break; 
 
   default:
-    navigate("login");
+    navigate('login');
     break;
 }
 */
