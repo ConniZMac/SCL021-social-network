@@ -13,8 +13,8 @@ function register() {
             <input type='email' id="createUser" placeholder='Crea tu usuario' />
             <input type='password' id='createPassword' placeholder='Contraseña' />
             <input type='password' id='confirmPassword' placeholder='Confirma tu Contraseña' />
-            <p id="alertRegister"></p>
-            <button class='createAccount' id='createAccount'> Crear cuenta <a href="#" id="register" class='btn-register'></a></button>
+            <p id='alertRegister'></p>
+            <button class='createAccount' id='createAccount'> Crear cuenta <a href='#' id='register' class='btn-register'></a></button>
            
         </div>
     </div>`;
@@ -28,7 +28,6 @@ function register() {
     event.preventDefault();
     navigate("login");
   });
-
   // Crear cuenta + posibles errores
   const btnCreateAccount = container.querySelector("#createAccount");
   btnCreateAccount.addEventListener("click", async () => {
