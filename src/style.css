@@ -148,10 +148,25 @@ h2{
 .title{
   font-family: "Jacques Francois";
 }
+.user{
 
+  background-color: rgba(253, 222, 173, 0.55);
+  margin-top: 10em;
+  margin-left: 1.5em;
+  width: 90%;
+  height: 10%;
+  position: fixed;
+  border: solid 1px #3D274E;
+  border-radius: 5px;
+  font-size: small;
+  align-items: center;
+  background-position: 0% 10%;
+  
+  
+}
 .bgPost{
   background-color: rgba(253, 222, 173, 0.55);
-  margin-top: 11em;
+  margin-top: 17em;
   margin-left: 1.5em;
   width: 90%;
   height: 18%;
@@ -179,7 +194,7 @@ h2{
 
 .cPost{
  background-color: rgba(253, 222, 173, 0.55);
- margin-top: 75%;
+ margin-top: 94%;
  margin-bottom: 10%;
  margin-left: 5%;
  width: 90%;
@@ -238,5 +253,10 @@ h2{
   margin-bottom: 2px;
   border-radius: 5px;
   font-family: "Jacques Francois";
+<<<<<<< HEAD
 >>>>>>> b02baf454495b990dd9c26202156b40f3799fa04
 }
+=======
+}
+
+>>>>>>> c4da75f679a535d045911e9869ac71a8c400a272

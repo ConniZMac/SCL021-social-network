@@ -1,5 +1,5 @@
 import { navigate } from "../router/routes.js";
-
+import {createPost} from "../firebase/databaseservice.js"
 function wall() {
   //Feed
   const postsWall = document.createElement("div");
@@ -20,6 +20,15 @@ function wall() {
   logo.src = "./img/logo2.png";
   logo.className = "logoFeed";
   bglogo.appendChild(logo);
+
+  //Div contenedeor de nombre usuario y boton salir.
+  const userName = document.createElement("div");
+  userName.className = ('user');
+  const dataUser = document.createElement('h4');
+  //dataUser.setAttribute('dataUser')
+  //dataUser.innerHTML = `<span class="h4bold">Hola!</span> ${wall.displayName}`;
+  postsWall.appendChild(userName);
+  
 
   //Fondo para contener los post amarillo
   const bgPost = document.createElement("div");
@@ -52,6 +61,7 @@ function wall() {
 const printPost = postBtn.querySelector("#postBtn");
 postBtn.addEventListener("click", (event) => {
 console.log ("Nuestro boton de publicar sí funciona!");
+createPost();
 
 /*event.preventDefault();*/
 navigate("wall");
