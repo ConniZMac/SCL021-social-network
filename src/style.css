@@ -176,7 +176,7 @@ h2{
   font-size: small;
   align-items: center;
   background-position: 0% 10%;
-  
+
   
   /*margin-top: 5%;
   position: relative;
@@ -205,58 +205,17 @@ h2{
  font-size: small;
  align-items: center;
  background-position: 0% 10%;
- 
-
-<<<<<<< HEAD
-#registerEmail,
-#createUser,
-#createPassword,
-#confirmPassword {
-  background: #e68e8e;
-  margin-bottom: 2px;
-  border-radius: 60px;
 }
 
-#createAccount {
-  background: #e68e8e;
-  border-radius: 40px;
-}
-
-.wall {
-  position: relative;
-  width: 390px;
-  height: 894px;
-  background-size: cover;
-  background-image: url("./img/Grande.jpeg");
-  padding: 0;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.post {
-  width: 250px;
-  height: 250px;
-  border-radius: 5%;
-=======
-}
 .post {
   width: 80%;
   height: 40%;
   border-radius: 5%;
 }
+
 .postBtn{
   background: #e68e8e;
   margin-bottom: 2px;
   border-radius: 5px;
   font-family: "Jacques Francois";
-<<<<<<< HEAD
->>>>>>> b02baf454495b990dd9c26202156b40f3799fa04
 }
-=======
-}
-
->>>>>>> c4da75f679a535d045911e9869ac71a8c400a272
