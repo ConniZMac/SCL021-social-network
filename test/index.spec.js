@@ -22,7 +22,11 @@ describe('se espera que si le paso "register me devuelva root con el html que re
   it('debería ser una función', () => {
     expect(navigate('register').querySelector('#createAccount')).not.toBeNull();
   });
+<<<<<<< HEAD
+});
+=======
 });
 
 
 
+>>>>>>> b02baf454495b990dd9c26202156b40f3799fa04
