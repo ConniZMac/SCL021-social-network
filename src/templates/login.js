@@ -29,9 +29,12 @@ function login() {
   });
   
    //link to enter with google
-  container.querySelector("#googleButton").addEventListener("click",() => {
+  container.querySelector("#googleButton").addEventListener("click",(event) => {
+    event.preventDefault();
     logInWithGoogle();
-  })
+    navigate("wall");
+  });
+  
 
   //link to go to wall
   const linkWall = container.querySelector("#logInUser");

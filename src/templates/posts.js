@@ -1,5 +1,6 @@
 import { navigate } from "../router/routes.js";
 import {createPost} from "../firebase/databaseservice.js"
+import {login} from "../templates/login.js"
 function wall() {
   //Feed
   const postsWall = document.createElement("div");
@@ -24,10 +25,15 @@ function wall() {
   //Div contenedeor de nombre usuario y boton salir.
   const userName = document.createElement("div");
   userName.className = ('user');
-  const dataUser = document.createElement('h4');
-  //dataUser.setAttribute('dataUser')
+  const logOutLogo= document.createElement("img");
+  logOutLogo.className = ('logOutLogo');
+  logOutLogo.src = "./img/logout.png";
+
+  //const dataUser = document.createElement('h4');
+  //dataUser.className = ('dataUser');
   //dataUser.innerHTML = `<span class="h4bold">Hola!</span> ${wall.displayName}`;
   postsWall.appendChild(userName);
+  userName.appendChild(logOutLogo);
   
 
   //Fondo para contener los post amarillo
@@ -58,15 +64,21 @@ function wall() {
   postsWall.appendChild(containerPost);
 
   //Funcion para publicar posts en el muro
-const printPost = postBtn.querySelector("#postBtn");
+//const printPost = postBtn.querySelector("#postBtn");
 postBtn.addEventListener("click", (event) => {
+const valuePost = post.value;
 console.log ("Nuestro boton de publicar sí funciona!");
-createPost();
-
-/*event.preventDefault();*/
+createPost(valuePost);
 navigate("wall");
 });
+
+  // función boton logout
+  const logOut= logOutLogo.querySelector(".logOutLogo")
+  logOutLogo.addEventListener("click", () => {
+  console.log ("Nuestro boton de salir sí funciona!");
+   navigate("/");
   
+  });
 
   return postsWall;
 }
