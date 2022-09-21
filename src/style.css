@@ -218,5 +218,34 @@ h2{
   margin-bottom: 2px;
   border-radius: 5px;
   font-family: "Jacques Francois";
+  cursor: pointer;
+  box-shadow: 0 5px #999;
+  
+
+}
+.postBtn :hover {background-color: #d8b8d7}
+
+.postBtn:active{
+  background-color: #e35b46;
+  box-shadow: 0 5px rgb(54, 50, 50);
+  transform: translateY(4px);
+  
+  
 }
 
+.logOutLogo {
+ width: 10%;
+ margin-top: 15px;
+ margin-left: 290px;
+ cursor: pointer;
+ 
+  
+}
+.logOutLogo :hover {background-color: #d8b8d7}
+
+.logOutLogo:active{
+  background-color: #e38d46;
+  box-shadow: 0 5px rgb(54, 50, 50);
+  transform: translatex(4px);
+  
+}
