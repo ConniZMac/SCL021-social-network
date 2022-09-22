@@ -1,6 +1,6 @@
 import { navigate } from "../router/routes.js";
-import {createPost} from "../firebase/databaseservice.js"
-import {login} from "../templates/login.js"
+import {createPost, printPost} from "../firebase/databaseservice.js"
+//import {login} from "../templates/login.js"
 function wall() {
   //Feed
   const postsWall = document.createElement("div");
@@ -58,10 +58,16 @@ function wall() {
   postBtn.className = "postBtn";
   bgPost.appendChild(postBtn);
   
-  //Contenedor de post
+  //Contenedor Padre de post
   const containerPost = document.createElement("div");
+  containerPost.setAttribute("id","postPrint");
   containerPost.className="cPost";
   postsWall.appendChild(containerPost);
+
+  //contenedor hijo de cpost donde se imprimen las publicaciones.
+  //const publicationContainer = document.createElement("div");
+  //publicationContainer.setAttribute("id","pcontainer");
+  //publicationContainer.appendChild(containerPost);
 
   //Funcion para publicar posts en el muro
 //const printPost = postBtn.querySelector("#postBtn");
@@ -69,7 +75,9 @@ postBtn.addEventListener("click", (event) => {
 const valuePost = post.value;
 console.log ("Nuestro boton de publicar sí funciona!");
 createPost(valuePost);
-navigate("wall");
+post.value = "" ;
+printPost();
+//navigate("wall");
 });
 
   // función boton logout
