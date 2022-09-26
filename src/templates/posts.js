@@ -1,5 +1,6 @@
 import { navigate } from "../router/routes.js";
-import {createPost} from "../firebase/databaseservice.js"
+import {createPost, printPost} from "../firebase/databaseservice.js"
+//import {login} from "../templates/login.js"
 function wall() {
   //Feed
   const postsWall = document.createElement("div");
@@ -24,10 +25,15 @@ function wall() {
   //Div contenedeor de nombre usuario y boton salir.
   const userName = document.createElement("div");
   userName.className = ('user');
-  const dataUser = document.createElement('h4');
-  //dataUser.setAttribute('dataUser')
+  const logOutLogo= document.createElement("img");
+  logOutLogo.className = ('logOutLogo');
+  logOutLogo.src = "./img/logout.png";
+
+  //const dataUser = document.createElement('h4');
+  //dataUser.className = ('dataUser');
   //dataUser.innerHTML = `<span class="h4bold">Hola!</span> ${wall.displayName}`;
   postsWall.appendChild(userName);
+  userName.appendChild(logOutLogo);
   
 
   //Fondo para contener los post amarillo
@@ -52,25 +58,51 @@ function wall() {
   postBtn.className = "postBtn";
   bgPost.appendChild(postBtn);
   
-  //Contenedor de post
+  //Contenedor Padre de post
   const containerPost = document.createElement("div");
+  containerPost.setAttribute("id","postPrint");
   containerPost.className="cPost";
   postsWall.appendChild(containerPost);
+  //Scroll
+
+  //contenedor hijo de cpost donde se imprimen las publicaciones.
+  //const publicationContainer = document.createElement("div");
+  //publicationContainer.setAttribute("id","pcontainer");
+  //publicationContainer.appendChild(containerPost);
 
   //Funcion para publicar posts en el muro
-const printPost = postBtn.querySelector("#postBtn");
 postBtn.addEventListener("click", (event) => {
+const valuePost = post.value;
 console.log ("Nuestro boton de publicar sí funciona!");
-createPost();
+createPost(valuePost);
+post.value = "" ;
+//e.preventDefault();
+//savePost(post);
+printPost();
 
-/*event.preventDefault();*/
-navigate("wall");
+//intento de mantener post en el muro
+   
+        //e.preventDefault();
+       // verification();
+        
+       // savePost(post);
+
+    //});
+
 });
-  
+
+  // función boton logout
+  logOutLogo.addEventListener("click", () => {
+  navigate("/");
+  const cleanEmail = document.getElementById ('email')
+  cleanEmail.value = " ";
+  const cleanPassword = document.getElementById ('password')
+  cleanPassword.value = "";
+  });
 
   return postsWall;
 }
 
 
-
 export { wall };
+
