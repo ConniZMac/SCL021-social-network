@@ -46,7 +46,8 @@ function logInWithGoogle() {
       // The AuthCredential type that was used.
       const credential = GoogleAuthProvider.credentialFromError(error);
       // ...
+
     });
 }
 
-export { createUser, logInWithGoogle };
+export { createUser, logInWithGoogle, auth };
