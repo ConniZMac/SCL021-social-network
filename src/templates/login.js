@@ -1,7 +1,6 @@
 import { navigate } from "../router/routes.js";
 import { logInWithGoogle } from "../firebase/authservice.js";
 
-
 function login() {
   const html = /*html*/ `
   <div class='bg-login' id="logInPage">
@@ -45,6 +44,5 @@ function login() {
 
   return container;
 }
-
 
 export { login };
