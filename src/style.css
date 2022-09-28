@@ -104,28 +104,15 @@ h2 {
   position: absolute;
   overflow: scroll;
 }
-/*margin: 0%;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}*/
+
 
 .bgTop {
-  display: inline-block;
+  /*display: inline-block;*/
   width: 100%;
   height: 120px;
   margin: 0;
   padding: 0;
   position: absolute;
-  /*width: 100%;
-  height: 30%;
-  padding: 0%;
-  margin-top: 0%;*/
   background-image: url("./img/Grande.jpeg");
 }
 
@@ -155,7 +142,7 @@ h2 {
   margin-left: 1.5em;
   width: 90%;
   height: 10%;
-  position: absolute;
+  position:absolute;
   border: solid 1px #3d274e;
   border-radius: 5px;
   font-size: small;
@@ -165,10 +152,10 @@ h2 {
 
 .bgPost {
   background-color: rgba(253, 222, 173, 0.55);
-  margin-top: 17em;
+  margin-top: 10em;
   margin-left: 1.5em;
   width: 90%;
-  height: 18%;
+  height: 20%;
   position: absolute;
   border: solid 1px #3d274e;
   border-radius: 5px;
@@ -177,24 +164,12 @@ h2 {
   background-position: 0% 10%;
   display: flex;
   flex-direction: column;
-
-  /*margin-top: 5%;
-  position: relative;
-  width: 70%;
-  height: 40%;
-  background-size: cover;
-  padding: 0;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-position: 0% 10%;
-  background-color: rgba(253, 222, 173, 0.55);*/
+  
 }
 
 .cPost {
   background-color: rgba(253, 222, 173, 0.55);
-  margin-top: 94%;
+  margin-top: 75%;
   margin-bottom: 30%;
   margin-left: 5%;
   width: 90%;
@@ -204,17 +179,20 @@ h2 {
   font-size: small;
   align-items: center;
   background-position: 0% 10%;
+
 }
 
 .post {
   width: 80%;
-  height: 40%;
+  height: 30%;
   border-radius: 5%;
-}
+  position:absolute;
+  margin-top:10%;
+   }
 
 .postBtn {
   background: #e68e8e;
-  margin-bottom: 9px;
+  margin-top: 17%;
   border-radius: 5px;
   font-family: "Jacques Francois";
   cursor: pointer;
@@ -234,8 +212,7 @@ h2 {
 
 .logOutLogo {
   width: 10%;
-  margin-top: 15px;
-  margin-left: 290px;
+  margin-left: 320px;
   cursor: pointer;
 }
 
