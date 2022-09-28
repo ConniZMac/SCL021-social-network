@@ -5,6 +5,7 @@ import {
   collection,
   addDoc,
   query,
+  Timestamp,
   onSnapshot,
   orderBy,
 } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js";
@@ -15,12 +16,16 @@ const auth = getAuth(app);
 //Funcion Crear Post
 async function createPost(description) {
   try {
-    const docRef = await addDoc(collection(db, "Posts"), {
-      userName: auth.currentUser.displayName,
-      date: new Date(),
-      text: description,
-      uId: auth.currentUser.uid,
-    });
+    const docRef = await addDoc(
+      collection(db, "Posts"),
+      /*orderBy("date", "desc"),*/ {
+        userName: auth.currentUser.displayName,
+        date: Timestamp.fromDate(new Date()),
+        text: description,
+        uId: auth.currentUser.uid,
+        likes: []
+      }
+    );
     console.log("Document written with ID: ", docRef.id);
   } catch (e) {
     console.error("Error adding document: ", e);
@@ -45,7 +50,7 @@ async function printPost(containerPost) {
     </div> 
     <div class="textAndEmoji">
       <div class="divText"> <p class= "publication"> ${post.text} </p> </div> 
-      <img class='likeImg' id="likeImg" src='./img/like.png'/>
+      <img class='likeImg'  src='./img/like.png' data-id="${doc.id}"/>
     </div>
   </div>
   `;
@@ -53,6 +58,11 @@ async function printPost(containerPost) {
     });
 
     containerPost.innerHTML = html;
+    containerPost.querySelectorAll(".likeImg").forEach((img) =>
+      img.addEventListener("click", (event) => {
+        console.log("Nos dieron like", event.target.dataset.id);
+      })
+    );
   });
 }
 
