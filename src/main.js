@@ -15,7 +15,7 @@ onAuthStateChanged(auth, (user) => {
     // ...
   } else {
     // User is signed out
-    navigate("login")
+    navigate("/")
     // ...
   }
 });
