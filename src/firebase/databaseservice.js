@@ -53,7 +53,7 @@ async function printPost(containerPost) {
     </div> 
     <div class="textAndEmoji">
       <div class="divText"> <p class= "publication"> ${post.text} </p> </div> 
-      <span class="likeNum">${ 
+      <span class="likeNum">${
         post.likes.length
       }</span>  <img class='likeImg'  src='./img/like.png' data-id="${
         documento.id
@@ -62,12 +62,10 @@ async function printPost(containerPost) {
       containerPost.append(pContainer);
       pContainer.querySelectorAll(".likeImg").forEach((img) =>
         img.addEventListener("click", async (event) => {
-          // const docRef = doc(db, "Posts", event.target.dataset.id);
-          await updateDoc(post, {
-            likes: [
-              ...event.target.dataset.likes.split(","),
-              auth.currentUser.email,
-            ],
+          const docRef = doc(db, "Posts", event.target.dataset.id);
+          let likes = [...event.target.dataset.likes.split(",")];
+          await updateDoc(docRef, {
+            likes: [...likes, auth.currentUser.email],
           });
         })
       );
