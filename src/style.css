@@ -105,20 +105,6 @@ h2 {
   overflow: scroll;
 }
 
-.wall {
-  min-height: 100vh;
-  width: 100%;
-  background-size: cover;
-  padding: 16px;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  overflow: scroll;
-}
-
-
 .bgTop {
   /*display: inline-block;*/
   width: 100%;
@@ -305,7 +291,7 @@ h2 {
   position: relative;
 }
 
-/************RESPONSIVE***********/
+/************RESPONSIVE**********/
 @media only screen and (max-width: 1330px) {
   .bg-login {
     width: 100%;
@@ -322,10 +308,11 @@ h2 {
   }
   .logoFeed {
     text-align: center;
-    width: 40%;
-    height: 50%;
+    width: 110%;
+    height: 60%;
     justify-content: center;
-    /*grid-template-rows: 15% 85%;*/
+    grid-template-rows: 15% 85%;
+    margin-left: 0%;
   }
 
   .logOutLogo {
