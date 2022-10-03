@@ -38,8 +38,7 @@ function login() {
   //link to go to wall
   const linkWall = container.querySelector("#logInUser");
   linkWall.addEventListener("click", (event) => {
-    event.preventDefault();
-    navigate("wall");
+    event.preventDefault();    
   });
 
   return container;

@@ -26,7 +26,7 @@ function register() {
   const linkSignIn = container.querySelector("#register");
   linkSignIn.addEventListener("click", (event) => {
     event.preventDefault();
-    navigate("login");
+    navigate("/");
   });
   // Crear cuenta + posibles errores
   const btnCreateAccount = container.querySelector("#createAccount");
