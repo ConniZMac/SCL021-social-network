@@ -211,14 +211,19 @@ h2 {
 }
 
 .logOutLogo {
-  width: 10%;
+  position: absolute;
+  margin-bottom: 80%;
+  width: 13%;
   margin-left: 320px;
   cursor: pointer;
+  margin-top:13%
 }
 
 .logOutLogo:hover,
 .logOutLogo:active {
-  width: 12%;
+  width: 14%;
+  box-shadow: 0 5px rgba(219, 207, 207, 0);
+  
 }
 
 .pContainer {
@@ -268,4 +273,26 @@ h2 {
   height: 10%;
   position: static;
   /*margin-top: 31%*/
+}
+
+.likeImg {
+  
+  margin-top: 2%;
+  width: 15%;
+  height: 30%;
+  position: static;
+  /*margin-top: 31%*/
+}
+
+.likeImg :hover {
+  background-color: #d8b8d7;
+}
+
+.likeImg:active {
+
+  box-shadow: 0 5px rgba(253, 222, 173, 0.55);
+  transform: translateY(4px);
+}
+.likeNum{
+  position: relative;  
 }
