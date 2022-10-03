@@ -53,12 +53,13 @@ async function printPost(containerPost) {
     </div> 
     <div class="textAndEmoji">
       <div class="divText"> <p class= "publication"> ${post.text} </p> </div> 
-      <span class="likeNum">${
+      <div class="likeNum"><span >${
         post.likes.length
-      }</span>  <img class='likeImg'  src='./img/like.png' data-id="${
+      }</span></div>  <img class='likeImg'  src='./img/like.png' data-id="${
         documento.id
       }" data-likes="${post.likes.toString()}"/>
-        </div>   `;
+      
+    </div>   `;
       containerPost.append(pContainer);
       pContainer.querySelectorAll(".likeImg").forEach((img) =>
         img.addEventListener("click", async (event) => {
