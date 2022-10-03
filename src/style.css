@@ -105,6 +105,19 @@ h2 {
   overflow: scroll;
 }
 
+.wall {
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  padding: 16px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  overflow: scroll;
+}
+
 
 .bgTop {
   /*display: inline-block;*/
@@ -142,7 +155,7 @@ h2 {
   margin-left: 1.5em;
   width: 90%;
   height: 10%;
-  position:absolute;
+  position: absolute;
   border: solid 1px #3d274e;
   border-radius: 5px;
   font-size: small;
@@ -164,7 +177,6 @@ h2 {
   background-position: 0% 10%;
   display: flex;
   flex-direction: column;
-  
 }
 
 .cPost {
@@ -179,16 +191,15 @@ h2 {
   font-size: small;
   align-items: center;
   background-position: 0% 10%;
-
 }
 
 .post {
   width: 80%;
   height: 30%;
   border-radius: 5%;
-  position:absolute;
-  margin-top:10%;
-   }
+  position: absolute;
+  margin-top: 10%;
+}
 
 .postBtn {
   background: #e68e8e;
@@ -216,14 +227,13 @@ h2 {
   width: 13%;
   margin-left: 320px;
   cursor: pointer;
-  margin-top:13%
+  margin-top: 13%;
 }
 
 .logOutLogo:hover,
 .logOutLogo:active {
   width: 14%;
   box-shadow: 0 5px rgba(219, 207, 207, 0);
-  
 }
 
 .pContainer {
@@ -276,7 +286,6 @@ h2 {
 }
 
 .likeImg {
-  
   margin-top: 2%;
   width: 15%;
   height: 30%;
@@ -289,10 +298,60 @@ h2 {
 }
 
 .likeImg:active {
-
   box-shadow: 0 5px rgba(253, 222, 173, 0.55);
   transform: translateY(4px);
 }
-.likeNum{
-  position: relative;  
+.likeNum {
+  position: relative;
+}
+
+/************RESPONSIVE***********/
+@media only screen and (max-width: 1330px) {
+  .bg-login {
+    width: 100%;
+  }
+  .wall {
+    width: 100%;
+    margin: 0%;
+  }
+  .bgTop {
+ height: 120px;
+  }
+  .bgLeFestin {
+    text-align: center;
+  }
+  .logoFeed {
+    text-align: center;
+    width: 40%;
+    height: 50%;
+    justify-content: center;
+    /*grid-template-rows: 15% 85%;*/
+  }
+
+  .logOutLogo {
+    width: 13%;
+    margin-left: 85%;
+  }
+  .bgPost {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    column-gap: 0px;
+    row-gap: 25px;
+    margin-bottom: 70%;
+  }
+  .post {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    column-gap: 0px;
+    row-gap: 25px;
+    margin-bottom: 70%;
+  }
+  footer {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    font-size: small;
+    padding: 0.3em 0;
+    bottom: 0%;
+  }
 }
