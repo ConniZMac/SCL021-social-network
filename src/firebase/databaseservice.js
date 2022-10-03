@@ -7,6 +7,8 @@ import {
   query,
   Timestamp,
   onSnapshot,
+  doc,
+  updateDoc,
   orderBy,
 } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js";
 
@@ -23,9 +25,10 @@ async function createPost(description) {
         date: Timestamp.fromDate(new Date()),
         text: description,
         uId: auth.currentUser.uid,
-        likes: []
+        likes: [],
       }
     );
+
     console.log("Document written with ID: ", docRef.id);
   } catch (e) {
     console.error("Error adding document: ", e);
@@ -38,31 +41,38 @@ async function printPost(containerPost) {
   console.log(allPost);
 
   onSnapshot(allPost, (querySnapshot) => {
-    let html = "";
-    querySnapshot.forEach((doc) => {
-      const post = doc.data();
+    querySnapshot.forEach((documento) => {
+      const post = documento.data();
       console.log(post);
-      html += `
-   <div class= "pContainer">  
+      const pContainer = document.createElement("div");
+      pContainer.className = "pContainer";
+      pContainer.innerHTML = `     
     <div class= "photoAndUserName">
       <img class='userPhoto' width='80'  src='./img/gorrito-chef.jpg'/>
       <p class="userNamePost"> ${post.userName}</p>
     </div> 
     <div class="textAndEmoji">
       <div class="divText"> <p class= "publication"> ${post.text} </p> </div> 
-      <img class='likeImg'  src='./img/like.png' data-id="${doc.id}"/>
-    </div>
-  </div>
-  `;
-      console.log(doc.id, " => ", doc.data());
+      <span class="likeNum">${ 
+        post.likes.length
+      }</span>  <img class='likeImg'  src='./img/like.png' data-id="${
+        documento.id
+      }" data-likes="${post.likes.toString()}"/>
+        </div>   `;
+      containerPost.append(pContainer);
+      pContainer.querySelectorAll(".likeImg").forEach((img) =>
+        img.addEventListener("click", async (event) => {
+          // const docRef = doc(db, "Posts", event.target.dataset.id);
+          await updateDoc(post, {
+            likes: [
+              ...event.target.dataset.likes.split(","),
+              auth.currentUser.email,
+            ],
+          });
+        })
+      );
+      console.log(documento.id, " => ", documento.data());
     });
-
-    containerPost.innerHTML = html;
-    containerPost.querySelectorAll(".likeImg").forEach((img) =>
-      img.addEventListener("click", (event) => {
-        console.log("Nos dieron like", event.target.dataset.id);
-      })
-    );
   });
 }
 

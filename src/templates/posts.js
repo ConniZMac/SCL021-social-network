@@ -21,7 +21,7 @@ function wall() {
   const logOutLogo = document.createElement("img");
   logOutLogo.className = "logOutLogo";
   logOutLogo.src = "./img/logout.png";
-  bgFruit.appendChild(logOutLogo);
+  postsWall.appendChild(logOutLogo);
   //Logo Le Festin
   const logo = document.createElement("img");
   logo.src = "./img/logo2.png";
