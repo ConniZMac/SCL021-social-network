@@ -219,7 +219,7 @@ h2 {
 .logOutLogo:hover,
 .logOutLogo:active {
   width: 14%;
-  box-shadow: 0 5px rgba(219, 207, 207, 0);
+  filter: drop-shadow(0 5px rgb(54, 50, 50));
 }
 
 .pContainer {
@@ -230,7 +230,7 @@ h2 {
 }
 .photoAndUserName {
   display: flex;
-  width: 40%;
+  width: 35%;
 }
 .userPhoto {
   width: 20%;
@@ -242,7 +242,7 @@ h2 {
 .userNamePost {
   font-family: "Jacques Francois";
   font-size: smaller;
-  margin-top: 65%;
+  margin-top: 75%;
   margin-left: 10%;
 }
 
@@ -251,32 +251,21 @@ h2 {
 }
 
 .divText {
-  width: 90%;
-  height: 40%;
   background-color: white;
   margin-top: 10%;
   border-radius: 5%;
   padding: 1%;
   font-family: "Jacques Francois";
   font-size: larger;
-  position: static;
+  position: relative;
 }
 
 .likeImg {
   margin-left: 85%;
-  margin-top: 2%;
-  width: 5%;
-  height: 10%;
-  position: static;
-  /*margin-top: 31%*/
-}
-
-.likeImg {
-  margin-top: 2%;
+  margin-top: -8%;
   width: 15%;
-  height: 30%;
-  position: static;
-  /*margin-top: 31%*/
+  height: 20%;
+  position: relative;
 }
 
 .likeImg :hover {
@@ -288,11 +277,14 @@ h2 {
   transform: translateY(4px);
 }
 .likeNum {
-  position: relative;
+  margin-left: 155px;
 }
 
 /************RESPONSIVE**********/
-@media only screen and (max-width: 1330px) {
+@media only screen and (min-width: 990px) {
+  .pContainer {
+    height: 500px;
+  }
   .bg-login {
     width: 100%;
   }
@@ -300,44 +292,88 @@ h2 {
     width: 100%;
     margin: 0%;
   }
-  .bgTop {
- height: 120px;
+  .cPost {
+    margin-top: 500px;
   }
+
   .bgLeFestin {
     text-align: center;
+    margin-top: 40px;
+  }
+  .bgTop {
+    width: 100%;
+    height: 200px;
   }
   .logoFeed {
     text-align: center;
-    width: 110%;
-    height: 60%;
+    width: 40%;
+    height: 50%;
     justify-content: center;
     grid-template-rows: 15% 85%;
     margin-left: 0%;
   }
-
+  .photoAndUserName {
+    display: flex;
+    width: 35%;
+  }
   .logOutLogo {
-    width: 13%;
+    width: 7%;
     margin-left: 85%;
+    margin-top: 40px;
+  }
+  .likeNum {
+    margin-left: 550px;
+    font-size: 40px;
   }
   .bgPost {
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto;
-    column-gap: 0px;
-    row-gap: 25px;
-    margin-bottom: 70%;
+    align-items: center;
+    margin-top: 230px;
+    margin-left: 70px;
+    width: 90%;
+    height: 250px;
+  }
+  .postBtn {
+    margin-top: 120px;
+    width: 90px;
+    height: 50px;
+    font-size: medium;
+  }
+  .title {
+    margin-top: 5px;
+    font-size: 26px;
+  }
+  .userPhoto {
+    width: 15%;
+    border-radius: 30% 30 30 30;
+    margin: 5%;
+    position: absolute;
+    float: left;
+    margin-left: 150px;
+    margin-top: 100px;
+  }
+  .userNamePost {
+    margin-left: 170px;
+    font-size: 20px;
   }
   .post {
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto;
-    column-gap: 0px;
-    row-gap: 25px;
-    margin-bottom: 70%;
+    height: 100px;
+    margin-top: 50px;
+  }
+  .publication {
+    margin: 5px;
+    font-size: 25px;
+  }
+
+  .likeImg {
+    margin-top: -30px;
+    width: 55px;
+    height: 80px;
   }
   footer {
     width: 100%;
     text-align: center;
     position: fixed;
-    font-size: small;
+    font-size: medium;
     padding: 0.3em 0;
     bottom: 0%;
   }

@@ -70,6 +70,11 @@ function wall() {
   //Aparecen los posts impresos cuando se abre sesión
   printPost(containerPost);
 
+  //contenedor hijo de cpost donde se imprimen las publicaciones.
+  //const publicationContainer = document.createElement("div");
+  //publicationContainer.setAttribute("id","pcontainer");
+  //publicationContainer.appendChild(containerPost);
+
   //Funcion para publicar posts en el muro
   postBtn.addEventListener("click", (event) => {
     const valuePost = post.value;
