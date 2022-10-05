@@ -1,47 +1,57 @@
 # LE FESTÍN
-
+ 
 ## Definición del producto:
-
-La red social **Le Festín** es una red creada para amantes de la cocina que quieran preguntar o dar tips sobre sus preparaciones. 
-
+ 
+La red social **Le Festín** es una red creada para amantes de la cocina.
+ 
 ## Imagen final del proyecto:
-
-(fotos)
-
+ 
+[![Captura-de-Pantalla-2022-10-04-a-la-s-08-59-16.png](https://i.postimg.cc/bwt2C6F9/Captura-de-Pantalla-2022-10-04-a-la-s-08-59-16.png)](https://postimg.cc/k274DyC2)
+ 
+[![Captura-de-Pantalla-2022-10-04-a-la-s-08-59-51.png](https://i.postimg.cc/QtkzpJ3X/Captura-de-Pantalla-2022-10-04-a-la-s-08-59-51.png)](https://postimg.cc/qhqQrnqY)
+ 
+[![Captura-de-Pantalla-2022-10-04-a-la-s-09-03-03.png](https://i.postimg.cc/rFbfRPr1/Captura-de-Pantalla-2022-10-04-a-la-s-09-03-03.png)](https://postimg.cc/N566WbbF)
+ 
+[![Captura-de-Pantalla-2022-10-04-a-la-s-09-00-21.png](https://i.postimg.cc/8Cbd4Kjn/Captura-de-Pantalla-2022-10-04-a-la-s-09-00-21.png)](https://postimg.cc/5H6FNm5w)
+ 
 ## Investigación UX:
-
-- Los principales usuarios de este proyecto son tod@s aquell@s que esten interesad@s en el mundo de Harry Potter.
-
-- **Harry Potter Lovers** permite a sus usuari@s crear una cuenta con correo, nombre de usuario y contraseña o tambien se les permite ingresar con google
-
-ver e interactuar con la información a través de distintos eventos (click y change), filtros y orden de los datos.
-
-- **Encuesta UX:** Para determinar las historias de usuario, creamos una encuesta consultando por el modo en que les gustaría visualizar la información de la página:
-  [![Img-encuesta.png](https://i.postimg.cc/1RpK4Q0C/Img-encuesta.png)](https://postimg.cc/BtnFwRVH)
+ 
+- Los principales usuarios de este proyecto son tod@s aquell@s que esten interesad@s en compartir tips de cocina, preguntar sobre algunas recetas, compartir lo que estan cocinando, etc.
+ 
+- **Le Festín** permite a sus usuari@s crear una cuenta con correo, nombre de usuario y contraseña o tambien se les permite ingresar con sus cuentas de google.
+ 
+ 
+- **Encuesta UX:** Para determinar las historias de usuario, creamos una encuesta consultando por tres aspectos principales; extensión del comentario, modo de registro y el tema principal de la red social:
+ 
+ [![Investigacio-n-de-usuario-1.png](https://i.postimg.cc/sx1D9fnT/Investigacio-n-de-usuario-1.png)](https://postimg.cc/wR8p9zYN)
+ 
 - **Historias de Usuario:**
-  A partir de las historias de usuario, determinamos que sus principales necesidades eran las siguientes:
-
-1. Visualizar los personajes con su casa.
-2. Visualizar los hechizos según su tipo.
-3. Visualizar las pócimas según su uso.
-
+ A partir de las historias de usuario, determinamos que sus principales necesidades eran las siguientes:
+ 
+1. Escribir post de más de 200 caracteres.
+2. Ingresar a la red social con cuenta de Google.
+3. Compartir comentarios en una red social de gastronomía.
+ 
 - (Cada uno de estos requerimientos fueron divididos en tareas pequeñas que se fueron completando de acuerdo al avance del proyecto en Trello).
-
+ 
 ## Prototipo de baja fidelidad:
-
-De acuerdo a la necesidad de l@s usuari@s se prototipó una página de inicio donde a través de un click pudieran acceder a la información seleccionada, presente en una segunda página.
-[![Prototipo-de-baja.jpg](https://i.postimg.cc/ZqXRxFwH/Prototipo-de-baja.jpg)](https://postimg.cc/Z9F4T3tv)
-
-## Prototipo de alta fidelidad:
-
-[![Prototipo-de-alta.png](https://i.postimg.cc/mkB1Mnfx/Prototipo-de-alta.png)](https://postimg.cc/KkpYhJ8Q)
-
+ 
+De acuerdo a la necesidad de l@s usuari@s se prototipó una página de de *inicio de sesión* que deribara a una pantalla donde pudiera comentar y ver los comentarios de los demás ausuarios de la red (*muro*), o en su defecto a una pantalla de *registro* en el caso de que el usuario no estuviera registrado.
+ 
+[![Captura-de-Pantalla-2022-10-03-a-la-s-17-37-30.png](https://i.postimg.cc/DZpbKMHY/Captura-de-Pantalla-2022-10-03-a-la-s-17-37-30.png)](https://postimg.cc/k685Qfnx)
+ 
+## Prototipo de alta fidelidad versión **mobile** y **web**:
+ 
+[![Captura-de-Pantalla-2022-10-03-a-la-s-17-39-47.png](https://i.postimg.cc/Sj0dz0zJ/Captura-de-Pantalla-2022-10-03-a-la-s-17-39-47.png)](https://postimg.cc/0KfDLBns)
+ 
+[![Captura-de-Pantalla-2022-10-03-a-la-s-17-40-05.png](https://i.postimg.cc/cHBTtkBm/Captura-de-Pantalla-2022-10-03-a-la-s-17-40-05.png)](https://postimg.cc/k6DWkcZ6)
+ 
+[![Captura-de-Pantalla-2022-10-03-a-la-s-17-40-18.png](https://i.postimg.cc/d1wjFmcT/Captura-de-Pantalla-2022-10-03-a-la-s-17-40-18.png)](https://postimg.cc/DWpXdGZ2)
+ 
 ## Proceso del diseño:
-
-Luego de una OH y al pasar del prototipo de baja al de alta fidelidad, nuestra primera decisión fue quitar el diseño de librero como aside y el diseño de libro como contenedor de la información. Esto porque requería dedicar mucho tiempo a CSS.
-
-También, luego de algunos feedbacks por parte de compañeras y coaches determinamos cambiar el background de la segunda pantalla debido al efecto visual negativo que provocaba.
-
-Además, en cuanto a la presentacion de hechizos y pocimas agrupados por su tipo, decidimos que el/la mism@ usuari@ descbriera eso a través del filtro.
-
-## Puedes ver **Harry Potter Lovers** [aquí](https://cataelisa.github.io/SCL021-data-lovers/) o [aquí](https://ashleybustose.github.io/SCL021-data-lovers/)
+ 
+Considerando los resultados de nuestra encuesta y teniendo clara las necesidades de nuestras usuarias, creamos nuestro primer prototipo de baja fidelidad enfocadas en la funcionalidad de nuestra red social.
+ 
+Al traspasar nuestro diseño a un prototipo de alta fidelidad elegimos cuidadosamente cada detalle para ambientar nuestra red social como una red de amantes de la cocina. Al mismo tiempo nació en nombre, inspirado por la famosa canción Le Festín utilizada como soundtrack en la película Ratatouille.
+ 
+## Puedes revisar **Le Festín** [aquí]() , [aquí]() o [aquí]().
